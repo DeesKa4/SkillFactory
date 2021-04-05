@@ -6,7 +6,8 @@ win_combination = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (1, 4, 7),
 def draw_borders():  # функция для отрисовки границ игры
     print('_____________')
     for i in range(3):
-        print('|', border[0 + i * 3], '|', border[1 + i * 3], '|', border[2 + i * 3], '|')
+        print('|', border[0 + i * 3], '|', border[1 + i * 3], \
+              '|', border[2 + i * 3], '|')
         print('_____________')
 
 
@@ -33,7 +34,8 @@ def waiting_input(player_sign):  # функция, ожидающая ввода
 def check_win():  # функция проверки на выигрышную комбинацию
     while True:
         for each in win_combination:
-            if (border[each[0] - 1] == border[each[1] - 1] == border[each[2] - 1]):  # проверка на наличие выигрышной комбинации
+            if (border[each[0] - 1] == border[each[1] - 1] == \
+                border[each[2] - 1]):  # проверка на наличие выигрышной комбинации
                 return border[each[1] - 1]
         else:
             return False

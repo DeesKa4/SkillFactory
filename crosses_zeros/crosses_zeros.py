@@ -34,8 +34,8 @@ def waiting_input(player_sign):  # функция, ожидающая ввода
 def check_win():  # функция проверки на выигрышную комбинацию
     while True:
         for each in win_combination:
-            if (border[each[0] - 1] == border[each[1] - 1] == \
-                border[each[2] - 1]):  # проверка на наличие выигрышной комбинации
+            if (border[each[0] - 1] == border[each[1] - 1] \ 
+                == border[each[2] - 1]):  # проверка на наличие выигрышной комбинации
                 return border[each[1] - 1]
         else:
             return False
